@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : 21/06/2022, 06:09:31 AM
+    Document   : html
+    Created on : 21/06/2022, 07:53:27 PM
     Author     : handy
 --%>
 
@@ -53,34 +53,32 @@
         prom[8]=(cjv[8]+dwi[8]+ecbd[8])/3;
         prom[9]=(cjv[9]+dwi[9]+ecbd[9])/3;      
     %>
-    <% 
-       out.println("<table class= table table-striped table-bordered table-hover table-dark>"
-                               
-       + "<tr>"
-       + "<th>MATRICULA</th>"
-       + "<th>NOMBRE</th>"
-       + "<th>APELLIDOS</th>"
-       + "<th>CJV</th>"
-       + "<th>DWI</th>"
-       + "<th>ECBD</th>"
-       + "<th>PROM</th>"
-       + "</tr>");
-                          
-        for (int i=0;i<10;i++) 
-                   
-         out.println("<tr>"
-          +"<td>"+matricula[i]+ "</td>"
-          + "<td>"+nombre[i]+ "</td>" 
-          + "<td>"+apellidos[i]+ "</td>"
-          + "<td>"+cjv[i]+"</td>"
-          +"<td>"+dwi[i]+"</td>"
-          +"<td>"+ecbd[i]+"</td>"
-          +"<td>"+prom[i]+"</td>"
-          +"</tr>");
-         out.println("</table>"); 
-         %>
-         </body>
-    </html>        
-        
+    <table  class="table table-striped table-bordered table-hover table-dark" align="center">
             
-           
+            <thead>
+                <tr>
+                    <th>MATRICULA</th>
+                    <th>NOMBRES</th>
+                    <th>APELLIDOS</th>
+                    <th>CVJ</th>
+                    <th>DWI</th>
+                    <th>ECDB</th>
+                    <th>PROM</th>
+                </tr>
+            </thead>
+            <% for (int i=0;i<9;i++){%>
+            <tbody>
+                <tr>
+                    <td> <%=matricula[i]%> </td>
+                    <td> <%=nombre[i]%> </td> 
+                    <td> <%=apellidos[i]%> </td> 
+                    <td> <%=cjv[i]%></td>
+                    <td> <%=dwi[i]%></td>
+                    <td> <%=ecbd[i]%></td>
+                    <td> <%=prom[i]%></td>
+                </tr>
+                <% }
+%> 
+            </tbody>
+    </table> 
+</html>
